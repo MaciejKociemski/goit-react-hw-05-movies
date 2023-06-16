@@ -1,9 +1,9 @@
 import { BrowserRouter as Router,Routes, Route, Navigate
 } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 // import { Loader } from './Loader/Loader';
-//add Suspense po lazy 
+
 
 const SharedLayout = lazy(() => import('./SharedLayout/SharedLayout'));
 const Home = lazy(() => import('../pages/Home'));
@@ -17,21 +17,21 @@ export const App = () => {
   return (
     <>
       <Router>
-        {/* <Suspense fallback={<div>Loading...please wait</div>}> */}
+        <Suspense fallback={<div>Loading...please wait</div>}>
           <SharedLayout>
 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="movies" element={<Movies />} />
-            {/* <Route path="movies/:movieId" element={<MovieDetails />}> */}
-              {/* <Route path="cast" element={<Cast />} /> */}
-              {/* <Route path="reviews" element={<Reviews />} /> */}
-            {/* </Route> */}
-            {/* <Route path="*" element={<Navigate to="/" />} /> */}
+            <Route path="movies/:movieId" element={<MovieDetails />}>
+              <Route path="cast" element={<Cast />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           </SharedLayout>
-        {/* </Suspense> */}
-        {/* <Toaster /> */}
+        </Suspense>
+        <Toaster />
       </Router>
     </>
   );
