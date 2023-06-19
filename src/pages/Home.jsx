@@ -3,6 +3,7 @@ import { fetchTrendMovies } from '../services/api';
 import MovieList from '../components/MovieList/MovieList';
 import { LoadingIndicator } from '../components/SharedLayout/LoadingDots';
 
+
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +28,6 @@ const Home = () => {
 
   return (
     <>
-      
       {isLoading ? (
         <LoadingIndicator />
       ) : error ? (
@@ -36,7 +36,8 @@ const Home = () => {
         </p>
       ) : (
         <MovieList trendingMovies={trendingMovies || []} />
-      )}
+          )}
+          
     </>
   );
 };

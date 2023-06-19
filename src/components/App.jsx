@@ -7,6 +7,7 @@ import {
 import { lazy, Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
 
+
 const SharedLayout = lazy(() => import('./SharedLayout/SharedLayout'));
 const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));

@@ -33,7 +33,9 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   &:hover,
   &:focus {
-    color: #1c85ff;
+    background-color: #0d57aa;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid #1c85ff;
   }
 `;

@@ -14,6 +14,10 @@ export const Input = styled.input`
   padding: 8px;
   margin-right: 15px;
   font-size: 16px;
+  &:hover,
+  &:focus {
+    border: 1px solid #0d57aa;
+  }
 `;
 
 export const Button = styled.button`
