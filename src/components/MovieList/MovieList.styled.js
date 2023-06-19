@@ -17,7 +17,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const List = styled.ul`
-  list-style: disc;
+  list-style: circle;
   color: #0d57aa;
 `;
 
@@ -28,7 +28,7 @@ export const ListItem = styled.li`
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 20px;
+  font-size: 18px;
   color: #0d57aa;
   transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
   text-decoration: none;

@@ -34,7 +34,7 @@ const MovieDetails = () => {
         <Link to={location?.state?.from ?? '/'}>
           <Button type="button">
             <BsArrowLeftShort
-              style={{ width: '25px', height: '25px', display: 'inline-block' }}
+              style={{ width: '20px', height: '20px', display: 'inline-block' }}
             />
             Go back
           </Button>

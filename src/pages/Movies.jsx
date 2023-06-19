@@ -47,7 +47,7 @@ const Movies = () => {
   return (
     <main>
       <StyledSection>
-        <SectionTitle></SectionTitle>
+        <SectionTitle>Movies Page</SectionTitle>
 
         <SearchMovies onSubmit={handleSubmit} />
 

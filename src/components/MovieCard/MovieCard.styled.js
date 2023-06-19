@@ -70,7 +70,7 @@ export const StyledLink = styled(Link)`
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  color: #0d57aa;
+  color: #333333;
 
   &:hover,
   &:focus {
