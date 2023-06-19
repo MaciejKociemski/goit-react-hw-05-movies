@@ -5,9 +5,10 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  display: flex;
+  
+display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #0d57aa;
   border-radius: 6px;
   background-color: #b5d1f2;

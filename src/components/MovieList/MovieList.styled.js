@@ -12,7 +12,8 @@ export const SectionTitle = styled.h2`
   padding-left: 5px;
   font-size: 30px;
   font-weight: 600;
-  text-align: center;
+  text-align: left;
+  
 `;
 
 export const List = styled.ul`

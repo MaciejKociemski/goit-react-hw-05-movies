@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 export const CastHeader = styled.h3`
   font-size: 25px;
   text-align: center;
+ 
 `;
 
 export const CastList = styled.ul`

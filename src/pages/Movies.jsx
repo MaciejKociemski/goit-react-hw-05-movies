@@ -11,7 +11,6 @@ import {
   StyledSection,
 } from '../components/MovieList/MovieList.styled';
 
-
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -48,7 +47,7 @@ const Movies = () => {
   return (
     <main>
       <StyledSection>
-        <SectionTitle>Movies Page</SectionTitle>
+        <SectionTitle></SectionTitle>
 
         <SearchMovies onSubmit={handleSubmit} />
 

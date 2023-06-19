@@ -4,8 +4,9 @@ export const Form = styled.form`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 20px;
+  
 `;
 
 export const Input = styled.input`
