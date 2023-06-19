@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; 
+import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/api';
 import {
   Author,
@@ -9,11 +9,11 @@ import {
   ReviewList,
   ReviewListItem,
   Wrapper,
-} from './Reviews.styled'; 
+} from './Reviews.styled';
 
 const Reviews = () => {
-  const { movieId } = useParams(); 
-  const [reviews, setReviews] = useState([]); 
+  const { movieId } = useParams();
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
     const fetchReviews = async () => {
       try {

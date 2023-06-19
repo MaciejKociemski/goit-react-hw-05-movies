@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-import { toast } from 'react-hot-toast'; 
-import { Button, Form, Input } from './SearchMovies.styled'; 
+import { toast } from 'react-hot-toast';
+import { Button, Form, Input } from './SearchMovies.styled';
 
 const SearchMovies = ({ onSubmit }) => {
   const handleSubmit = e => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    const query = e.target.elements.query.value; 
+    const query = e.target.elements.query.value;
     if (!query) {
       toast.error('Please enter something');
       return;
     }
 
-    onSubmit(query); 
-    e.target.reset(); 
+    onSubmit(query);
+    e.target.reset();
   };
 
   return (
@@ -23,7 +23,6 @@ const SearchMovies = ({ onSubmit }) => {
     </Form>
   );
 };
-
 
 SearchMovies.propTypes = { onSubmit: PropTypes.func.isRequired };
 

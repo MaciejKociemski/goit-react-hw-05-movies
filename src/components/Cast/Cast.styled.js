@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin-top: 30px;
   padding: 0 80px 40px;
+  font-size: 18px;
 `;
 
 export const CastHeader = styled.h3`
@@ -14,19 +15,29 @@ export const CastList = styled.ul`
   margin-top: 30px;
   display: flex;
   align-items: center;
-  gap: 40px;
+  row-gap: 40px;
+  column-gap: 40px;
   flex-wrap: wrap;
+  width: 100%;
 `;
 
 export const CastListItem = styled.li`
-  width: calc((100% - 4 * 40px) / 5);
-  height: 400px;
-  word-wrap: break-word;
+  width: calc((100% - (4 * 40px)) / 5);
+  height: 340px;
+
+  @media screen and (max-width: 768px) {
+    height: 180px;
+  }
 `;
 
 export const CastInfo = styled.div`
   margin-top: 20px;
   max-width: 220px;
+  font-size: 14px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 export const CastName = styled.h3`

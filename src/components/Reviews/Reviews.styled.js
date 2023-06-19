@@ -24,12 +24,21 @@ export const ReviewList = styled.ul`
 export const ReviewListItem = styled.li`
   padding-bottom: 10px;
   border-bottom: 1px solid #d3d3d3;
+  font-size: 14px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Author = styled.h4`
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 500;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Review = styled.p`

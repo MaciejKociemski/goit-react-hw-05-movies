@@ -1,18 +1,16 @@
-import { Suspense } from 'react'; 
-import { useEffect, useState } from 'react'; 
-import { useParams, Outlet, useLocation, Link } from 'react-router-dom'; // 
-import { BsArrowLeftShort } from 'react-icons/bs'; 
-import { fetchMovieById } from '../services/api'; 
+import React, { useEffect, useState } from 'react';
+import { useParams, Outlet, useLocation, Link } from 'react-router-dom';
+import { BsArrowLeftShort } from 'react-icons/bs';
+import { fetchMovieById } from '../services/api';
 import MovieCard from '../components/MovieCard/MovieCard';
-import { LoadingIndicator } from 'components/SharedLayout/LoadingDots';
 import { Button, Container } from './MovieDetails.styled';
+import { LoadingIndicator } from 'components/SharedLayout/LoadingDots';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
   const [selectedMovie, setSelectedMovie] = useState({});
 
-  
   useEffect(() => {
     const fetchSelectedMovie = async movieId => {
       try {
@@ -26,10 +24,13 @@ const MovieDetails = () => {
     fetchSelectedMovie(movieId);
   }, [movieId]);
 
+  if (!selectedMovie.title) {
+    return <LoadingIndicator />;
+  }
+
   return (
     <main>
       <Container>
-       
         <Link to={location?.state?.from ?? '/'}>
           <Button type="button">
             <BsArrowLeftShort
@@ -38,11 +39,8 @@ const MovieDetails = () => {
             Go back
           </Button>
         </Link>
-        <MovieCard movie={selectedMovie} />{' '}
-        
-        <Suspense fallback={<LoadingIndicator />}>
-          <Outlet />
-        </Suspense>
+        <MovieCard movie={selectedMovie} />
+        <Outlet />
       </Container>
     </main>
   );

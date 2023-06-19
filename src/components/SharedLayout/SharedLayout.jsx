@@ -1,11 +1,9 @@
-import React,{ Suspense } from 'react';
-import { Outlet } from 'react-router-dom'; 
-import { LoadingIndicator } from './LoadingDots'; 
-import { StyledHeader, StyledNavLink } from './SharedLayout.styled'; 
-
+import React, { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { LoadingIndicator } from './LoadingDots';
+import { StyledHeader, StyledNavLink } from './SharedLayout.styled';
 
 const SharedLayout = () => {
-    
   return (
     <>
       <StyledHeader>
@@ -15,9 +13,8 @@ const SharedLayout = () => {
         </nav>
       </StyledHeader>
 
-     
       <Suspense fallback={<LoadingIndicator />}>
-        <Outlet /> 
+        <Outlet />
       </Suspense>
     </>
   );

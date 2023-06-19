@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; 
-import { fetchMovieCast } from '../../services/api'; 
+import { useParams } from 'react-router-dom';
+import { fetchMovieCast } from '../../services/api';
 
 import {
   CastHeader,
@@ -31,12 +31,11 @@ const Cast = () => {
 
   return (
     <Wrapper>
-      <CastHeader>Cast</CastHeader> 
+      <CastHeader>Cast</CastHeader>
       {cast.length ? (
         <CastList>
           {cast.map(actor => (
             <CastListItem className="cast-card" key={actor.id}>
-             
               {actor.profile_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
@@ -49,7 +48,6 @@ const Cast = () => {
                 />
               )}
 
-             
               <CastInfo>
                 <CastName>{actor.name}</CastName>
                 <p>Character: {actor.character}</p>

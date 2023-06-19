@@ -11,6 +11,7 @@ import {
   StyledLink,
   StyledSection,
 } from '../components/MovieList/MovieList.styled'; 
+// import { Loader } from 'components/Loader/Loader';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -54,14 +55,12 @@ const Movies = () => {
     <main>
       <StyledSection>
         <SectionTitle>Movies Page</SectionTitle>
-
-        <SearchMovies onSubmit={handleSubmit} /> 
+        
+        <SearchMovies onSubmit={handleSubmit} />
 
         <List>
           {movies.map(movie => (
             <ListItem key={movie.id}>
-
-              
               <StyledLink to={`/movies/${movie.id}`} state={{ from: location }}>
                 {movie.title}
               </StyledLink>

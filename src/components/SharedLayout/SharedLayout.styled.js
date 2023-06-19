@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const StyledHeader = styled.header`
   padding: 20px 30px;
   text-align: center;
-  box-shadow: 0px 4px 4px #d3d3d3;
+  box-shadow: 0px 1px 10px #8aa4b7;
 `;
 
 export const StyledNavLink = styled(NavLink)`

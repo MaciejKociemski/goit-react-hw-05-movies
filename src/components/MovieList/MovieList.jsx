@@ -5,22 +5,26 @@ import {
   SectionTitle,
   List,
   ListItem,
-} from './MovieList.styled'; 
+} from './MovieList.styled';
+// import { Link } from 'react-router-dom';
 
-const MovieList = ({ trendingMovies }) => {
+
+ const MovieList = ({ trendingMovies }) => {
   return (
     <StyledSection>
-      <SectionTitle>Trending today</SectionTitle>
+      
+        <SectionTitle>Trending today</SectionTitle>
 
-      <List>
-        {trendingMovies.map(trendingMovie => (
-          <ListItem key={trendingMovie.id}>
-            <StyledLink to={`/movies/${trendingMovie.id}`}>
-              {trendingMovie.title}
-            </StyledLink>
-          </ListItem>
-        ))}
-      </List>
+        <List>
+          {trendingMovies.map(trendingMovie => (
+            <ListItem key={trendingMovie.id}>
+              <StyledLink to={`/movies/${trendingMovie.id}`}>
+                {trendingMovie.title}
+              </StyledLink>
+            </ListItem>
+          ))}
+        </List>
+      
     </StyledSection>
   );
 };
@@ -39,3 +43,6 @@ MovieList.propTypes = {
     })
   ).isRequired,
 };
+
+
+
